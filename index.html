@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.CSS">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1>
+      Validaciones JS</h1>
+  </header>
+  <main class="art_cent">
+    <section class="margen">
+      <article class="card__card_article">
+        <h3 class="card_title">
+          <p>Los campos se validaran de la siguiente manera</p>
+        </h3>
+        <ul class="card_list"> <br />
+          <li> <b>Ficha:</b> se puede ingresar cualquier caracter</li>
+          <li> <b>Nombre:</b> solo se puede ingresar letras </li>
+          <li> <b>Apellidos:</b> solo se puede ingresar letras</li>
+          <li> <b>Correo:</b> solo se puede ingresar un correo valido</li>
+          <li> <b>Teléfono:</b> solo se puede ingresar números</li>
+          <li> <b>Genero:</b> solo se puede seleccionar un genero</li>
+          <li> <b>Ciudad:</b> solo se puede seleccionar una ciudad</li>
+          <li> <b>Habilidades:</b> se tiene que seleccionar como minimo 3 Habilidades</li>
+        </ul>
+      </article>
+      <form action="Enviar" method="get" class="formulario">
+        <!---Ficha-->
+        <div class="entradas">
+          <label for="Número de ficha"> Número de ficha</label entradas__label>
+          <input type="text" id="Número de ficha" class="entradas_input">
+        </div>
+        <!---Nombre-->
+        <div class="entradas">
+          <label for="Nombre"> Nombre</label entradas__label>
+          <br>
+          <input type="text" pattern="[A-Za-z]+" required class="entradas_input">
+        </div>
+        <!---Apellido-->
+        <div class="entradas">
+          <label for="Apellido"> Apellido</label entradas__label>
+          <br>
+          <input type="text" id="Apellido" pattern="[A-Za-z]+" required class="entradas_input">
+        </div>
+        <!---Correo-->
+        <div class="entradas">
+          <label for="Correo"> Correo</label entradas__label>
+          <br>
+          <input type="email" id="Correo" required class="entradas_input">
+        </div>
+        <!---Teléfono-->
+        <div class="entradas">
+          <label for="Telefono"> Teléfono</label entradas__label>
+          <br>
+          <input type="tel" id="Telefono" pattern="[0-9]{10}" maxlength="10" required class="entradas_input">
+        </div>
+        <!---Genero-->
+        <div>
+          <br>
+          <input type="radio" name="genero" id="Hombre" value="Hombre" required>
+          <label for="Hombre">Hombre</label>
+          <input type="radio" name="genero" id="Mujer" value="Mujer">
+          <label for="Mujer">Mujer</label>
+          <input type="radio" name="genero" id="Otro" value="Otro">
+          <label for="Otro">Otro</label>
+        </div>
+        <br>
+        <!---Ciudades-->
+        <div class="entradas">
+          <label for="Ciudad"> Ciudad</label>
+          <br>
+          <select name="Ciudad" id="Ciudad">
+            <option value="Seleccionar">Seleccionar</option>
+            <option value="Giron">Giron</option>
+            <option value="Bucaramanga">Bucaramanga</option>
+            <option value="Floridablanca">Floridablanca</option>
+            <option value="Piedecuesta">Piedecuesta</option>
+          </select>
+        </div>
+        <br>
+        <!---Habilidades-->
+        <div>
+          <p>Seleccione minimo 3 habilidades</p>
+        </div>
+        <div>
+          <input type="checkbox" name="habilidades" id="HTML" value="HTML">
+          <label for="HTML">HTML</label>
+        </div>
+        <div>
+          <input type="checkbox" name="habilidades" id="CSSl" value="CSS">
+          <label for="CSS">CSS</label>
+        </div>
+        <div>
+          <input type="checkbox" name="habilidades" id="JavaScrip" value="JavaScrip">
+          <label for="JavaScrip">JavaScrip</label>
+        </div>
+        <div>
+          <input type="checkbox" name="habilidades" id="PHP" value="PHP">
+          <label for="PHP">PHP</label>
+        </div>
+        <div>
+          <input type="checkbox" name="habilidades" id="JAVA" value="JAVA">
+          <label for="JAVA">JAVA</label>
+        </div>
+        <div>
+          <input type="checkbox" name="habilidades" id="SQL" value="SQL">
+          <label for="SQL">SQL</label>
+        </div>
+        <div>
+          <input type="checkbox" name="habilidades" id="UML" value="UML">
+          <label for="UML">UML</label>
+        </div> <br>
+        <!--Boton enviar-->
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>
